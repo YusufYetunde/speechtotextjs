@@ -424,16 +424,16 @@ const SpeechToText = () => {
   };
 
   return (
-    <div className=" container p-8 max-w-3xl mx-auto">
-      <h1 className=" heading text-2xl font-bold mb-4 text-center">Speech to Text</h1>
+    <div className=" container ">
+      <h1 className=" heading ">Speech to Text</h1>
       <div className="section">
       <div className="options">
-        <label htmlFor="language" className="block text-sm font-medium">
+        <label htmlFor="language" className="">
           Language
         </label>
         <select
           id="language"
-          className="mt-1 block w-full p-2 border rounded"
+          className=""
           value={language}
           onChange={(e) => setLanguage(e.target.value)}
         >
@@ -445,7 +445,7 @@ const SpeechToText = () => {
         </select>
       </div>
       <button
-        className={`btn flex items-center justify-center gap-2 w-full py-2 px-4 font-medium rounded ${
+        className={`btn ${
           recording 
         }`}
         onClick={recording ? handleStopRecording : handleStartRecording}
@@ -454,23 +454,23 @@ const SpeechToText = () => {
       </button>
       </div>
       <div className="line"></div>
-      <h2 className="text-lg font-bold mt-6">Result:</h2>
+      <h2 className="">Result:</h2>
       <div
-        className=" result mt-2 p-4 border rounded h-40 overflow-y-auto"
+        className=" result "
         spellCheck="false"
       >
         <p>{result}</p>
         {interimResult && <p>{interimResult}</p>}
       </div>
-      <div className=" buttons flex justify-between mt-4">
+      <div className=" buttons ">
         <button
-          className=" btn py-2 px-4  rounded"
+          className=" btn "
           onClick={handleClear}
         >
           Clear
         </button>
         <button
-          className="btn py-2 px-4 rounded"
+          className="btn "
           onClick={handleDownload}
           disabled={!result}
         >
