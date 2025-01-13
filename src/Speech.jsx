@@ -426,7 +426,8 @@ const SpeechToText = () => {
   return (
     <div className=" container p-8 max-w-3xl mx-auto">
       <h1 className=" heading text-2xl font-bold mb-4 text-center">Speech to Text</h1>
-      <div className="options mb-4">
+      <div className="section">
+      <div className="options">
         <label htmlFor="language" className="block text-sm font-medium">
           Language
         </label>
@@ -451,6 +452,8 @@ const SpeechToText = () => {
       >
         {recording ? "Stop Listening" : "Start Listening"}
       </button>
+      </div>
+      <div className="line"></div>
       <h2 className="text-lg font-bold mt-6">Result:</h2>
       <div
         className=" result mt-2 p-4 border rounded h-40 overflow-y-auto"

@@ -1,7 +1,7 @@
 @import url(https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
 
 :root {
-  --primary-color: #356aff;
+  --primary-color: #008080;
   --bg-color: #fff;
   --text-color: #000;
   --light-text-color: #a5a5a5;
@@ -22,7 +22,7 @@ body {
   color: var(--text-color);
 }
 .container {
-  width: 400px;
+  width: 800px;
   padding: 20px;
   border-radius: 10px;
   background-color: var(--bg-color);
@@ -32,12 +32,25 @@ body {
   font-weight: 500;
   margin-bottom: 10px;
 }
+.container .section{
+  width:100%;
+  display:flex;
+  gap: 20px;
+  justify-content: center;
+  align-items:center;
+}
+.container .options{
+  width: 100% !important;
+}
 .container .options select {
   width: 100%;
+  height: 60px;
   padding: 10px;
   border: 1px solid var(--light-text-color);
   border-radius: 5px;
   outline: none;
+  display: flex;
+  gap: 20px;
 }
 .container .options div:not(:last-child) select {
   margin-bottom: 20px;
@@ -65,7 +78,7 @@ body {
   margin-bottom: 20px;
   height: 60px;
   padding: 20px;
-  width: 100%;
+  width: 50%;
   outline: none;
   border: none;
   border-radius: 5px;
